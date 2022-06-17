@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Smartlook.setupAndStartRecording("alfa_bb54cdfd81c9248678443feb88ac98acb3a26229")
+        Smartlook.setupAndStartRecording("beta_91704b33cf09c8fe7db45849864a812b9bb827e6")
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
