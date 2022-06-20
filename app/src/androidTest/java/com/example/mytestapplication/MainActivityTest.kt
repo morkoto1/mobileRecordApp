@@ -29,7 +29,8 @@ class MainActivityTest {
 
     @Test
     fun mainActivityTest() {
-        Thread.sleep(1500);
+
+        Thread.sleep(30000);
 
         val overflowMenuButton = onView(
             allOf(
