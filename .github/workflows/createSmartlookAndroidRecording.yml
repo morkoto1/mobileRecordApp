@@ -30,15 +30,15 @@ jobs:
         profile: Nexus 6
         script: ./gradlew connectedAndroidTest
 
-    - name: Send GitHub Action trigger data to Slack workflow
-      if: failure()
-      id: slack
-      uses: slackapi/slack-github-action@v1.19.0
-      with:
-        payload: |
-            {
-              "text": "Automated job to make Android a recording has failed :pepe_fire: :pepe_fire: :pepe_fire: \n\n Link: https://github.com/morkoto1/mobileRecordApp/actions"
-            }
-      env:
-        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
+#    - name: Send GitHub Action trigger data to Slack workflow
+ #     if: failure()
+  #    id: slack
+   #   uses: slackapi/slack-github-action@v1.19.0
+    #  with:
+     #   payload: |
+      #      {
+       #       "text": "Automated job to make Android a recording has failed :pepe_fire: :pepe_fire: :pepe_fire: \n\n Link: https://github.com/morkoto1/mobileRecordApp/actions"
+        #    }
+      #env:
+      #  SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
         
