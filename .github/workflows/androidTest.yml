@@ -26,5 +26,5 @@ jobs:
         target: default
         arch: x86_64
         profile: Nexus 6
-        script: ./gradlew MainActivityTest 
+        script: ./gradlew connectedAndroidTest 
         
