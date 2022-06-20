@@ -4,6 +4,8 @@ package com.example.mytestapplication
 import android.view.View
 import android.view.ViewGroup
 import androidx.test.espresso.Espresso.onView
+import androidx.test.espresso.IdlingPolicies
+import androidx.test.espresso.IdlingRegistry
 import androidx.test.espresso.action.ViewActions.*
 import androidx.test.espresso.assertion.ViewAssertions.*
 import androidx.test.espresso.matcher.ViewMatchers.*
@@ -15,13 +17,21 @@ import org.hamcrest.Matcher
 import org.hamcrest.Matchers.`is`
 import org.hamcrest.Matchers.allOf
 import org.hamcrest.TypeSafeMatcher
+import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
+import java.util.concurrent.TimeUnit
+
 
 @LargeTest
 @RunWith(AndroidJUnit4::class)
 class MainActivityTest {
+
+    @Before
+    fun registerIdlingResource() {
+        Thread.sleep(60000);
+    }
 
     @Rule
     @JvmField
@@ -29,8 +39,6 @@ class MainActivityTest {
 
     @Test
     fun mainActivityTest() {
-
-        Thread.sleep(30000);
 
         val overflowMenuButton = onView(
             allOf(
