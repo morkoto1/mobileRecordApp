@@ -28,17 +28,14 @@ import java.util.concurrent.TimeUnit
 @RunWith(AndroidJUnit4::class)
 class MainActivityTest {
 
-    @Before
-    fun registerIdlingResource() {
-        Thread.sleep(60000);
-    }
-
     @Rule
     @JvmField
     var mActivityScenarioRule = ActivityScenarioRule(MainActivity::class.java)
 
     @Test
     fun mainActivityTest() {
+
+        Thread.sleep(1500);
 
         val overflowMenuButton = onView(
             allOf(
