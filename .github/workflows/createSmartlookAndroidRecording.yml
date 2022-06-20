@@ -24,7 +24,7 @@ jobs:
     - name: Run Espresso tests
       uses: ReactiveCircus/android-emulator-runner@v2.24.0
       with:
-        api-level: 32
+        api-level: 29
         script: ./gradlew connectedAndroidTest
 
 #    - name: Send GitHub Action trigger data to Slack workflow
