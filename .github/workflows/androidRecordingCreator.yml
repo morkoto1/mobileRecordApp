@@ -7,7 +7,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -18,11 +17,32 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: gradle
-
+    
     - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
-    - name: Build with Gradle
-      uses: ReactiveCircus/android-emulator-runner@v2.24.0
+      run: chmod +x gradlew 
+    
+    - uses: actions/checkout@v1
+    - uses: malinskiy/action-android/emulator-run-cmd@release/0.1.2
       with:
-        api-level: 28
-        script: ./gradlew connectedAndroidTest
+        cmd: ./gradlew connectedAndroidTest
+        api: 25
+        tag: default
+        abi: x86
+    
+    
+    
+   # - uses: actions/checkout@v3
+   # - name: set up JDK 11
+   #   uses: actions/setup-java@v3
+   #   with:
+   #     java-version: '11'
+   #     distribution: 'temurin'
+   #     cache: gradle
+
+   # - name: Grant execute permission for gradlew
+   #   run: chmod +x gradlew
+   # - name: Build with Gradle
+   #   uses: ReactiveCircus/android-emulator-runner@v2.24.0
+   #   with:
+   #     api-level: 28
+   #     script: ./gradlew connectedAndroidTest
