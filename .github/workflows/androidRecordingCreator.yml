@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
 
     steps:
     - uses: actions/checkout@v1
@@ -41,7 +41,7 @@ jobs:
         cmd: ./gradlew connectedAndroidTest
         api: 28
         tag: default
-        abi: x86
+        abi: x86_64
     
     
     
