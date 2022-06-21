@@ -39,7 +39,7 @@ jobs:
     - uses: malinskiy/action-android/emulator-run-cmd@release/0.1.2
       with:
         cmd: ./gradlew connectedAndroidTest
-        api: 25
+        api: 32
         tag: default
         abi: x86
     
