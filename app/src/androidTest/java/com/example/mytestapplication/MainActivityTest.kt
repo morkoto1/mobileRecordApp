@@ -4,10 +4,7 @@ package com.example.mytestapplication
 import android.view.View
 import android.view.ViewGroup
 import androidx.test.espresso.Espresso.onView
-import androidx.test.espresso.IdlingPolicies
-import androidx.test.espresso.IdlingRegistry
 import androidx.test.espresso.action.ViewActions.*
-import androidx.test.espresso.assertion.ViewAssertions.*
 import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.ext.junit.rules.ActivityScenarioRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -17,11 +14,9 @@ import org.hamcrest.Matcher
 import org.hamcrest.Matchers.`is`
 import org.hamcrest.Matchers.allOf
 import org.hamcrest.TypeSafeMatcher
-import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import java.util.concurrent.TimeUnit
 
 
 @LargeTest
@@ -35,7 +30,7 @@ class MainActivityTest {
     @Test
     fun mainActivityTest() {
 
-        Thread.sleep(1500);
+        Thread.sleep(15000);
 
         val overflowMenuButton = onView(
             allOf(
@@ -52,7 +47,7 @@ class MainActivityTest {
         )
         overflowMenuButton.perform(click())
 
-        Thread.sleep(1500);
+        Thread.sleep(15000);
 
         val materialTextView = onView(
             allOf(
