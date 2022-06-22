@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "672480557147",
+    "project_id": "smartlookrecord-4dd14",
+    "storage_bucket": "smartlookrecord-4dd14.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:672480557147:android:4e559eec4286b391e6e77e",
+        "android_client_info": {
+          "package_name": "com.smartlook.record"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "672480557147-jrpe15udrh25es6sb819fv9k91ivm4ns.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDY-Q8JlgrUIFsARizZg0tM-MH34kJqOmc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "672480557147-jrpe15udrh25es6sb819fv9k91ivm4ns.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
