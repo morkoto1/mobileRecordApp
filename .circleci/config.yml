@@ -1,4 +1,12 @@
 version: 2
+daily-run-workflow:
+   triggers:
+     - schedule:
+         cron: "0 0 1-31 * *"
+         filters:
+           branches:
+             only:
+               - main
 jobs:
   build:
     working_directory: ~/code
