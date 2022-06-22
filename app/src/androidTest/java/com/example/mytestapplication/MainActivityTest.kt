@@ -30,7 +30,7 @@ class MainActivityTest {
     @Test
     fun mainActivityTest() {
 
-        Thread.sleep(15000);
+        Thread.sleep(1500);
 
         val overflowMenuButton = onView(
             allOf(
@@ -47,7 +47,7 @@ class MainActivityTest {
         )
         overflowMenuButton.perform(click())
 
-        Thread.sleep(15000);
+        Thread.sleep(1500);
 
         val materialTextView = onView(
             allOf(
