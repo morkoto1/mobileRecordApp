@@ -8,7 +8,7 @@ class SlideshowViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
         value = "SMARLOOK RECORDING\n" +
-                "trial account\nThis is slideshow Fragment"
+                "QA account\nThis is slideshow Fragment"
     }
     val text: LiveData<String> = _text
 }
